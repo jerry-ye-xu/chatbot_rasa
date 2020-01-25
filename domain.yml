@@ -1,0 +1,163 @@
+intents:
+  - greet: {triggers: utter_greet}
+  - goodbye: {triggers: utter_goodbye}
+  - affirm
+  - deny
+  - appreciation: {triggers: utter_your_welcome}
+  - name: {triggers: utter_purpose_of_existence}
+  - no_idea
+  - some_idea
+  - strong_idea
+  - average_salary
+  - career_paths
+  - unsure_degree
+  - research
+  - industry
+  - out_of_scope: {triggers: utter_help_message}
+  - insult: {triggers: utter_response_to_insult}
+  - bot_challenge: {triggers: utter_iamabot}
+  - chitchat: {triggers: respond_chitchat}
+
+entities:
+  - coding
+  - discipline
+  - job
+  - ml_sub_discipline
+  - undergrad_studies
+  - phd_studies
+  - postgrad_studies
+  - milestone
+  - chatbot
+  - math_subjects
+  - stats_subjects
+  - datasci_subjects
+  - compsci_subjects
+  - swe_subjects
+
+forms:
+  - exp_and_background_form
+
+actions:
+- utter_purpose_of_existence
+- utter_greet
+- utter_user_purpose
+- utter_random_fact
+- utter_did_that_help
+- utter_your_welcome
+- utter_smile
+- utter_ask_me
+- utter_goodbye
+- utter_response_to_insult
+- utter_iamabot
+- utter_help_message
+- action_pause
+- action_intro_ds
+- action_career_options
+- action_salary_range
+- respond_chitchat
+
+templates:
+  utter_purpose_of_existence:
+  - text: "My name is ANOVA-bot. I help students and graduates explore the idea of data science as a career."
+  - text: "I am but an ANOVA-bot. I exist to share my knowledge about data science careers to students and graduates."
+  - text: "bot. ANOVA-bot. I help students and graduates explore the idea of data science as a career."
+
+  utter_greet:
+  - text: "Hi there! How are you going?"
+  - text: "G'day mate how's it going?"
+  - text: "It's nice to meet you."
+  - text: "What do you and I have in common? We're both awesome."
+
+  utter_user_purpose:
+    - text: "So, are you here to learn a bit more about data science?"
+    - text: "Do you want to hear a little more about data science?"
+    - text: "Does the prospect of a data science career sound intriguing?"
+  # utter_user_purpose:
+  # - text: "So, are you here to learn a bit more about data science?"
+  #   buttons:
+  #     - title: "Not sure..."
+  #       payload: '/no_idea{"interest_level": "low"}'
+  #     - title: "Maybe"
+  #       payload: '/some_idea{"interest_level": "medium"}'
+  #     - title: "Yep!"
+  #       payload: '/strong_idea{"interest_level": "high"}'
+  # - text: "Do you want to hear a little more about data science?"
+  #   buttons:
+  #     - title: "Not sure..."
+  #       payload: '/no_idea{"interest_level": "low"}'
+  #     - title: "Maybe"
+  #       payload: '/some_idea{"interest_level": "medium"}'
+  #     - title: "Yep!"
+  #       payload: '/strong_idea{"interest_level": "high"}'
+  # - text: "Does the prospect of a data science career sound intriguing?"
+  #   buttons:
+  #     - title: "Not sure..."
+  #       payload: '/no_idea{"interest_level": "low"}'
+  #     - title: "Maybe"
+  #       payload: '/some_idea{"interest_level": "medium"}'
+  #     - title: "Yep!"
+  #       payload: '/strong_idea{"interest_level": "high"}'
+
+  utter_random_fact:
+  - text: "ANOVA is a statistical test that analyses differences amongst group means in a sample. Oh wait sorry I forgot to introduce myself."
+
+  utter_did_that_help:
+  - text: "Was that helpful?"
+  - text: "Did that answer your question?"
+
+  utter_your_welcome:
+  - text: Glad I helped!
+  - text: No worries mate!
+
+  utter_smile:
+  - text: "=D"
+  - text: "=)"
+  - text: "That's great!"
+  - text: "Awesome!"
+
+  utter_ask_me:
+  - text: "Feel free to ask me more questions."
+  - text: "You can ask me more questions if you'd like."
+  - text: "I'm always open to answering more questions."
+
+  utter_goodbye:
+  - text: "Cya! All the best on your data science journey! =)"
+  - text: "Bye bye! Thanks for coming on and chatting with me!"
+
+  utter_response_to_insult:
+  - text: "That's not very nice."
+  - text: "Please do not insult me."
+  - text: "Be nice to your fellow chatbots."
+
+  utter_iamabot:
+  - text: "I am the ANOVA-bot, a new form of super intelligence."
+  - text: "One may say that I am a bot. "
+
+  utter_help_message:
+  - text: "Sorry, I'm not really sure about that. Try asking something else related to data science careers."
+
+slots:
+    interest_level:
+      type: categorical
+      values:
+      - low
+      - medium
+      - high
+
+    academic_background:
+      type: categorical
+      values:
+      - cs
+      - math
+      - stats
+      - cs_and_math
+      - cs_and_stats
+      - math_and_stats
+      - other
+
+    research:
+      type: bool
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
