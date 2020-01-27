@@ -1,30 +1,16 @@
 actions:
 - action_career_options
-- action_day_to_day
-- action_degree_advice
-- action_ds_tools
 - action_industry_advice
 - action_intro_ds
 - action_pause
 - action_salary_range
 - respond_chitchat
-- utter_ask_has_studies
-- utter_ask_lang_one
-- utter_ask_lang_three
-- utter_ask_lang_two
-- utter_ask_major_one
-- utter_ask_major_two
 - utter_ask_me
-- utter_ask_work_in_research
-- utter_ask_years_of_study
-- utter_ask_years_of_work
-- utter_default
 - utter_did_that_help
 - utter_goodbye
 - utter_greet
+- utter_help_message
 - utter_iamabot
-- utter_not_int
-- utter_please_fill_form
 - utter_purpose_of_existence
 - utter_random_fact
 - utter_response_to_insult
@@ -40,12 +26,10 @@ entities:
 - datasci_subjects
 - discipline
 - job
-- language
 - math_subjects
 - milestone
 - ml_sub_discipline
-- mooc
-- num_years
+- num_work_years
 - phd_studies
 - postgrad_studies
 - stats_subjects
@@ -53,32 +37,27 @@ entities:
 - undergrad_studies
 - uni_year
 forms:
-- academic_background_form
-- work_exp_form
+- exp_and_background_form
 intents:
-- affirm
-- goodbye:
-    triggers: utter_goodbye
-- deny
-- num_years
-- request_study_advice
-- ask_job_scopes
-- ask_average_salary
-- appreciation:
-    triggers: utter_your_welcome
+- career_paths
 - academic_background
 - greet:
     triggers: utter_greet
+- affirm
+- years_of_exp
+- goodbye:
+    triggers: utter_goodbye
+- deny
+- appreciation:
+    triggers: utter_your_welcome
 - name:
     triggers: utter_purpose_of_existence
-- work_background
-- ask_day_to_day
-- ask_ds_tools
-- request_job_advice
+- average_salary
+- unsure_degree
 - research
 - industry
 - out_of_scope:
-    triggers: utter_default
+    triggers: utter_help_message
 - insult:
     triggers: utter_response_to_insult
 - bot_challenge:
@@ -91,73 +70,12 @@ session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
 slots:
-  has_studies:
-    type: bool
-  lang_one:
+  interest_level:
     type: categorical
     values:
-    - python
-    - r
-    - sql
-    - scala
-    - julia
-    - matlab
-    - vba
-    - sas
-    - go
-    - golang
-    - java
-    - c++
-    - c
-    - rust
-    - haskell
-    - clojure
-    - other
-    - none
-  lang_three:
-    type: categorical
-    values:
-    - python
-    - r
-    - sql
-    - scala
-    - julia
-    - matlab
-    - vba
-    - sas
-    - go
-    - golang
-    - java
-    - c++
-    - c
-    - rust
-    - haskell
-    - clojure
-    - javascript
-    - other
-    - none
-  lang_two:
-    type: categorical
-    values:
-    - python
-    - r
-    - sql
-    - scala
-    - julia
-    - matlab
-    - vba
-    - sas
-    - go
-    - golang
-    - java
-    - c++
-    - c
-    - rust
-    - haskell
-    - clojure
-    - javascript
-    - other
-    - none
+    - low
+    - medium
+    - high
   major_one:
     type: categorical
     values:
@@ -174,62 +92,24 @@ slots:
     - other
     - none
   requested_slot:
-    type: categorical
-    values:
-    - has_studies
-    - major_one
-    - major_two
-    - years_of_study
-    - lang_one
-    - lang_two
-    - lang_three
-    - years_of_work
-    - work_in_research
-  work_in_research:
-    type: bool
-  years_of_study:
-    max_value: 100.0
-    min_value: 0.0
-    type: float
-  years_of_work:
+    type: unfeaturized
+  years_of_exp:
     max_value: 100.0
     min_value: 0.0
     type: float
 templates:
-  utter_ask_has_studies:
-  - buttons:
-    - payload: /affirm
-      title: Yes
-    - payload: /deny
-      title: No
-    text: Are you currently studying at university or have finished studying?
-  utter_ask_lang_one:
-  - text: Name a programming language you're comfortable with. If you don't know any
-      that's okay! Just write "none".
-  utter_ask_lang_three:
-  - text: What about a third language? If you don't know anymore that's okay! Just
-      write "none".
-  utter_ask_lang_two:
-  - text: Do you know another language? If you don't know anymore that's okay! Just
-      write "none".
+  utter_ask_interest_level:
+  - text: How interested are you in data science?
   utter_ask_major_one:
-  - text: What did you study at university? Please tell me your major.
+  - text: What did you study at university? Please list out your major and minors.
   utter_ask_major_two:
-  - text: Did you study another major/minor? If so, what was it?
+  - text: Did you study another major/minor?
   utter_ask_me:
   - text: Feel free to ask me questions.
   - text: You can ask me questions if you'd like.
   - text: I'm always open to answering questions.
-  utter_ask_work_in_research:
-  - text: Are you thinking aout working in industry e.g. getting a graduate job or
-      doing research in academia?
-  utter_ask_years_of_study:
-  - text: How many years have you been studying at uni?
-  utter_ask_years_of_work:
-  - text: How many years have you been working full time?
-  utter_default:
-  - text: Sorry, I'm not really sure about that. Try asking something else related
-      to data science careers.
+  utter_ask_years_of_exp:
+  - text: How many years of professional experience do you have?
   utter_did_that_help:
   - text: Was that helpful?
   - text: Did that answer your question?
@@ -241,14 +121,12 @@ templates:
   - text: G'day mate how's it going?
   - text: It's nice to meet you.
   - text: What do you and I have in common? We're both awesome.
+  utter_help_message:
+  - text: Sorry, I'm not really sure about that. Try asking something else related
+      to data science careers.
   utter_iamabot:
   - text: I am the ANOVA-bot, a new form of super intelligence.
   - text: 'One may say that I am a bot. '
-  utter_not_int:
-  - text: The value provided is not an integer. Please try again.
-  utter_please_fill_form:
-  - text: Before I answer your question, why don't tell you tell me a little bit about
-      yourself?
   utter_purpose_of_existence:
   - text: My name is ANOVA-bot. I help students and graduates explore the idea of
       data science as a career.

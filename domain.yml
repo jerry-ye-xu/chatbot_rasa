@@ -53,6 +53,9 @@ actions:
   - utter_purpose_of_existence
   - utter_greet
   - utter_user_purpose
+  - utter_please_fill_form
+  - utter_random_fact
+
   - utter_did_that_help
   - utter_your_welcome
   - utter_smile
@@ -60,25 +63,32 @@ actions:
   - utter_thanks
   - utter_ask_me
   - utter_goodbye
+
   - utter_response_to_insult
-  - utter_random_fact
   - utter_iamabot
   - utter_default
   - utter_not_int
-  - utter_has_studies
+
+  - utter_ask_has_studies
   - utter_ask_major_one
   - utter_ask_major_two
   - utter_ask_years_of_study
   - utter_ask_lang_one
   - utter_ask_lang_two
   - utter_ask_lang_three
-  - utter_years_of_work
-  - utter_work_in_research
+  - utter_ask_years_of_work
+  - utter_ask_work_in_research
+
   - action_pause
   - action_intro_ds
-  - action_career_options
   - action_salary_range
+  - action_career_options
+  - action_ds_tools
+  - action_day_to_day
+
   - action_industry_advice
+  - action_degree_advice
+
   - respond_chitchat
 
 templates:
@@ -97,6 +107,9 @@ templates:
     - text: "So, are you here to learn a bit more about data science?"
     - text: "Do you want to hear a little more about data science?"
     - text: "Does the prospect of a data science career sound intriguing?"
+
+  utter_please_fill_form:
+    - text: "Before I answer your question, why don't tell you tell me a little bit about yourself?"
 
   utter_random_fact:
   - text: "ANOVA is a statistical test that analyses differences amongst group means in a sample."
@@ -167,7 +180,7 @@ templates:
 # FORM UTTERS
 #
 
-  utter_has_studies:
+  utter_ask_has_studies:
   - text: "Are you currently studying at university or have finished studying?"
     buttons:
         - title: "Yes"
@@ -193,10 +206,10 @@ templates:
   utter_ask_lang_three:
   - text: "What about a third language? If you don't know anymore that's okay! Just write \"none\"."
 
-  utter_years_of_work:
+  utter_ask_years_of_work:
   - text: "How many years have you been working full time?"
 
-  utter_work_in_research:
+  utter_ask_work_in_research:
   - text: "Are you thinking aout working in industry e.g. getting a graduate job or doing research in academia?"
 
 slots:
@@ -226,7 +239,7 @@ slots:
       max_value: 100.0
 
     lang_one:
-      type: cateorical
+      type: categorical
       values:
       - Python
       - R
@@ -248,7 +261,7 @@ slots:
       - none
 
     lang_two:
-      type: cateorical
+      type: categorical
       values:
       - Python
       - R
@@ -271,7 +284,7 @@ slots:
       - none
 
     lang_three:
-      type: cateorical
+      type: categorical
       values:
       - Python
       - R
@@ -306,6 +319,16 @@ slots:
 
     requested_slot:
       type: categorical
+      values:
+        - has_studies
+        - major_one
+        - major_two
+        - years_of_study
+        - lang_one
+        - lang_two
+        - lang_three
+        - years_of_work
+        - work_in_research
 
 session_config:
   session_expiration_time: 60

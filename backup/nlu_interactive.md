@@ -6,6 +6,7 @@
 - Yes it does
 - yes I do
 - yes that was
+- Yes I am currently studying
 
 ## intent:career_paths
 - what are some jobs in [data science](discipline)?
@@ -23,6 +24,9 @@
 - I also studied [math](discipline)
 - I studied [stats](discipline)
 - Yes. I also studied [math](discipline)
+- yes I am studying at university
+- I studied at [computer science](discipline:cs) at uni
+- I also studied [statistics](discipline:stats)
 
 ## intent:industry
 - I have two years of professional experience
@@ -46,7 +50,16 @@
 
 ## intent:average_salary
 - what is the average salary of a [data scientist](discipline)?
-- what is the average salary of a [data scientist](discipline)?
+
+## intent:request_study_advice
+- What should I study at university for [data science](discipline)?
+- What should I study at uni for [data science](discipline)?
+
+## intent:num_years
+- I'm currently in [3rd](num_years:3) year
+
+## intent:ask_average_salary
+- how much do [data scientists](discipline) earn?
 
 ## synonym:cs
 - comp sci

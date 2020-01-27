@@ -169,3 +169,50 @@
     - action_pause
 * goodbye
     - utter_goodbye
+    
+## interactive_story_3
+* greet
+    - utter_greet
+* request_study_advice{"discipline": "data science"}
+    - utter_please_fill_form
+    - academic_background_form
+    - form{"name": "academic_background_form"}
+    - slot{"requested_slot": "has_studies"}
+* form: academic_background
+    - form: academic_background_form
+* form: affirm
+    - form: academic_background_form
+    - slot{"has_studies": true}
+    - slot{"requested_slot": "major_one"}
+* form: academic_background{"discipline": "cs"}
+    - form: academic_background_form
+    - slot{"major_one": "cs"}
+    - slot{"requested_slot": "major_two"}
+* form: academic_background{"discipline": "stats"}
+    - form: academic_background_form
+    - slot{"major_two": "stats"}
+    - slot{"requested_slot": "years_of_study"}
+* form: num_years{"num_years": "3"}
+    - form: academic_background_form
+    - slot{"years_of_study": "3"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_pause
+    - action_degree_advice
+    - utter_did_that_help
+* appreciation
+    - utter_your_welcome
+* goodbye
+    - utter_goodbye
+* ask_average_salary{"discipline": "data scientists"}
+    - action_salary_range
+    - utter_did_that_help
+* deny
+    - utter_sadface
+    - utter_ask_me
+* ask_job_scopes
+    - action_career_options
+    - utter_did_that_help
+* affirm
+    - utter_smile
+    - utter_ask_me
