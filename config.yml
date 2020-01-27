@@ -27,4 +27,4 @@ policies:
     core_threshold: 0.35
     fallback_nlu_action_name: "action_default_fallback"
     fallback_core_action_name: "action_default_fallback"
-    deny_suggestion_intent_name: "deny"
+    deny_suggestion_intent_name: "chitchat"
