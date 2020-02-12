@@ -13,3 +13,7 @@
 ## ask_aussie_animals
 * chitchat/ask_aussie_animals
     - Yea our fauna is pretty dangerous - spiders are poisonous, snakes will bite and the crocs are out to get ya.
+
+## ask_smart_ai
+* chitchat/ai
+    - We are smart but not that smart. Don't worry.
