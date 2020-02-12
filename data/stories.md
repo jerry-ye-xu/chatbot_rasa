@@ -242,12 +242,12 @@
   * affirm
     - utter_smile
     - utter_ask_me
-  * ask_job_scopes
+<!--   * ask_job_scopes
     - action_career_options
     - utter_did_that_help
   * affirm
     - utter_smile
-    - utter_ask_me
+    - utter_ask_me -->
   * ask_ds_tools
     - action_ds_tools
     - utter_did_that_help
@@ -279,12 +279,12 @@
   * affirm
     - utter_smile
     - utter_ask_me
-  * ask_job_scopes
+<!--   * ask_job_scopes
     - action_career_options
     - utter_did_that_help
   * affirm
     - utter_smile
-    - utter_ask_me
+    - utter_ask_me -->
   * ask_ds_tools
     - action_ds_tools
     - utter_did_that_help

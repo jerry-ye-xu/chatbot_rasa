@@ -169,7 +169,7 @@
     - action_pause
 * goodbye
     - utter_goodbye
-    
+
 ## interactive_story_3
 * greet
     - utter_greet
@@ -202,17 +202,17 @@
     - utter_did_that_help
 * appreciation
     - utter_your_welcome
-* goodbye
-    - utter_goodbye
 * ask_average_salary{"discipline": "data scientists"}
     - action_salary_range
     - utter_did_that_help
 * deny
     - utter_sadface
     - utter_ask_me
-* ask_job_scopes
+* goodbye
+    - utter_goodbye
+<!-- * ask_job_scopes
     - action_career_options
     - utter_did_that_help
 * affirm
     - utter_smile
-    - utter_ask_me
+    - utter_ask_me -->

@@ -125,6 +125,10 @@
 - how good is [data science](discipline) for making money?
 - is it easy to make alot of money in [data science](discipline)?
 - what is the top salary for a [data scientist](discipline)?
+- how much do senior [data scientists](discipline) earn?
+- how much do [data scientists](discipline) after tax?
+- how much do [data scientists](discipline) before tax?
+- what's the average salary of a [data scientist](discipline)?
 
 
 ## intent:ask_day_to_day
@@ -135,8 +139,7 @@
 - Do [data scientists](discipline) build models?
 - What are some of the things [data scientists](discipline) do at work?
 
-
-## intent:ask_job_scopes
+<!-- ## intent:ask_job_scopes -->
 - how does a data scientist get promoted?
 - what are some jobs in [data science](discipline)?
 - what jobs are there in [data science](discipline)?
@@ -301,6 +304,17 @@
 - Is time travel possible?
 - Who is batman?
 - What the hell?
+
+## intent:chitchat/ai
+- are you smart?
+- is [ANOVA-bot](chatbot) truly intelligent?
+- are [robots](chatbot) smart?
+- will [robots](chatbot) take over the world
+- is [ai](chatbot) going to replace everyone?
+- is everyone going to lose their job to [ai](chatbot)?
+- do you think [bots](chatbot) will take over?
+- what if you build a really smart [bot](chatbot) and it becomes the new king?
+- are you actually smart or are you just pretending?
 
 
 <!--
