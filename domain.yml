@@ -5,9 +5,6 @@ intents:
   - deny
   - appreciation: {triggers: utter_your_welcome}
   - name: {triggers: utter_purpose_of_existence}
-  # - no_idea
-  # - some_idea
-  # - strong_idea
   - academic_background
   - work_background
   - num_years
@@ -82,7 +79,7 @@ actions:
   - action_pause
   - action_intro_ds
   - action_salary_range
-  - action_career_options
+  # - action_career_options
   - action_ds_tools
   - action_day_to_day
 
