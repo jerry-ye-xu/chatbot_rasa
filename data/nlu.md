@@ -264,23 +264,6 @@
 - tell me another random fact
 - tell me something interesting
 
-<!-- ## intent:out_of_scope
-- Are you trolling me?
-- Is time travel possible?
-- Who is batman?
-- Is it true that Australian's animals are all trying to kill you?
-- Are Australian snakes dangerous?
-- Do spiders bite where you live?
-- How's the weather?
-- What's the weather like where you are?
-- Is it hot over there?
-- Do you live in a cold area?
-- Does Australia rain often?
-- What is the meaning of life?
-- Why are we here?
-- Do humans really exist?
-- Why are we building robots? -->
-
 ## intent:chitchat/meaning_of_life
 - What is the meaning of life?
 - Why are we here?

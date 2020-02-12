@@ -5,9 +5,6 @@ intents:
   - deny
   - appreciation: {triggers: utter_your_welcome}
   - name: {triggers: utter_purpose_of_existence}
-  # - no_idea
-  # - some_idea
-  # - strong_idea
   - academic_background
   - work_background
   - num_years
@@ -313,9 +310,6 @@ slots:
 
     work_in_research:
       type: bool
-
-    # work_in_industry:
-    #   type: bool
 
     requested_slot:
       type: categorical

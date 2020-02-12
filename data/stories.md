@@ -242,12 +242,6 @@
   * affirm
     - utter_smile
     - utter_ask_me
-<!--   * ask_job_scopes
-    - action_career_options
-    - utter_did_that_help
-  * affirm
-    - utter_smile
-    - utter_ask_me -->
   * ask_ds_tools
     - action_ds_tools
     - utter_did_that_help
@@ -320,23 +314,6 @@
       - utter_ask_me
   * goodbye
     - utter_goodbye
-
-<!-- * affirm
-* mood_great
-  - utter_happy -->
-<!--
-  * affirm
-  - utter_industry_or_academia? -->
-
-<!-- ## student + non-quantitative degree + somewhat interested
-
-## student + non-quantitative degree + not sure
-
-## student + quantitative degree + very interested
-
-## student + quantitative degree + somewhat interested
-
-## student + quantitative degree + not sure -->
 
 ## student + deny
 * greet
