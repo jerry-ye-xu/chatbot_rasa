@@ -204,6 +204,37 @@
 - What are the things I can learn to help me get a job as a [data scientist](discipline)
 - What are some things I need to learn to be a [data scientist](discipline)
 
+## intent:request_study_advice
+- I'm not sure what I should study?
+- What [degree](undergrad_studies) is best for me?
+- What should I study?
+- what should I study at uni?
+- what should I study at university?
+- Should I do [computer science](discipline)?
+- Should I do a [data science](discipline) [degree](undergrad_studies)?
+- What kind of academic background should I have?
+- Will math be useful for [data science](discipline)?
+- Is [software engineering](discipline) helpful for [data science](discipline)?
+- Will [computer science](discipline) be useful for [data science](discipline)?
+- Is [statistics](discipline) good for [data science](discipline)?
+- Do I need to learn [stats](discipline) to be a good data scientist?
+- Is [deep learning](ml_sub_discipline) good to learn?
+
+
+## intent:request_job_advice
+- What can I do to improve my chances of getting a data science job?
+- How do I get a data science job?
+- I want to get a data science job. How?
+- What skills do I need to get a data science job?
+- What do I need to learn to become a data scientist?
+- Will taking courses on [Coursera](mooc) help me get a job as a [data scientist](discipline)
+- Is learning some [math](discipline) on [Khan academy](mooc) help me get a job?
+- I just took a course on [udacity](mooc). Will that help me get a job as a data scientist?
+- How helpful are the courses on [udemy](mooc) for getting a job as a data scientist?
+- What are the things I need to do to get a job as a [data scientist](discipline)
+- What are the things I can learn to help me get a job as a [data scientist](discipline)
+- What are some things I need to learn to be a [data scientist](discipline)
+
 <!--
     INTENT: HAVING SOME FUN
 -->
