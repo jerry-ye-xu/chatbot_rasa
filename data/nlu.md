@@ -63,6 +63,14 @@
 - I see, that was insightful!
 - Oh really that's really cool!
 
+## intent:insult
+- You suck
+- you're so stupid
+- stupid [bot](chatbot)
+- to hell with you
+- f off
+- you piece of shit
+- ugly disgusting stupid [bot](chatbot)
 
 ## intent:name
 - What's your name?
@@ -182,7 +190,6 @@
 - Do I need to learn [stats](discipline) to be a good data scientist?
 - Is [deep learning](ml_sub_discipline) good to learn?
 
-
 ## intent:request_job_advice
 - What can I do to improve my chances of getting a data science job?
 - How do I get a data science job?
@@ -196,7 +203,6 @@
 - What are the things I need to do to get a job as a [data scientist](discipline)
 - What are the things I can learn to help me get a job as a [data scientist](discipline)
 - What are some things I need to learn to be a [data scientist](discipline)
-
 
 <!--
     INTENT: CAREER PATH
@@ -235,7 +241,6 @@
 - I want to do work on [computer vision](ml_sub_discipline)
 - what is working in industry as a [data scientist](discipline) like?
 - what does working in industry mean?
-
 
 <!--
     INTENT: HAVING SOME FUN

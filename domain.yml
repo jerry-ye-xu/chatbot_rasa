@@ -10,7 +10,6 @@ intents:
   - num_years
   - ask_average_salary
   - ask_day_to_day
-  - ask_job_scopes
   - ask_ds_tools
   - request_study_advice
   - request_job_advice
@@ -23,7 +22,6 @@ intents:
   - chitchat: {triggers: respond_chitchat}
 
 entities:
-  - coding
   - discipline
   - job
   - language
