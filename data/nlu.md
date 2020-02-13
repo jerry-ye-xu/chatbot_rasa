@@ -63,6 +63,14 @@
 - I see, that was insightful!
 - Oh really that's really cool!
 
+## intent:insult
+- You suck
+- you're so stupid
+- stupid [bot](chatbot)
+- to hell with you
+- f off
+- you piece of shit
+- ugly disgusting stupid [bot](chatbot)
 
 ## intent:name
 - What's your name?

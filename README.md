@@ -44,10 +44,18 @@ When you export, Rasa will ask whether you want to export. So the best choice is
 
 ## Application
 
+## Rasa X
 
+To check the API token authentication
+```{bash}
+curl --request POST \
+     --url https://<Rasa X server host>/api/projects/default/git_repositories?api_token=<your api token> \
+     --header 'content-type: application/json' \
+     --data-binary @repository.json
+```
 
 ## Worklog
-- 12/01/20 | 0.0.7-rc - Merge with Master branch for Rasa X deployment.  
+- 12/01/20 | 0.0.7-rc - Merge with Master branch for Rasa X deployment.
 - 27/01/20 | 0.0.6-rc - Revamped nlu classes to support a more structured story flow. Added 3 forms, academic, industry and career choice. Removed `interest_level` intents and
 - 26/01/20 | 0.0.5-rc - Building miscellaneous question path and one happy path. Made forms work and updated intents classes - we're no longer incorporating the interest level of the user. Added list of random facts.
 - 26/01/20 | 0.0.4-rc - Incorporate `chitchat` into chatbot.
