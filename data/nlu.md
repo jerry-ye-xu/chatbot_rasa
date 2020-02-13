@@ -72,6 +72,12 @@
 - you piece of shit
 - ugly disgusting stupid [bot](chatbot)
 
+## intent:out_of_scope
+- I love finance
+- My boyfriend broke up with me
+- Life sucks and I'm sad
+- Pizza is really yummy!
+
 ## intent:name
 - What's your name?
 - What are you called?
@@ -108,6 +114,9 @@
 - I'm currently working full-time as a [data scientist].
 - Been working at ANZ for [2](num_years) years.
 - I'm working part-time whilst studying at university
+- I've used [Python](programming_lang) and [Scala](programming_lang) alot at my work
+- [SQL](programming_lang) is something I use everyday.
+- I use [java](programming_lang) at work
 
 
 ## intent:num_years
@@ -146,8 +155,6 @@
 - what does a [data scientist](discipline) do everyday?
 - Do [data scientists](discipline) build models?
 - What are some of the things [data scientists](discipline) do at work?
-
-<!-- ## intent:ask_job_scopes -->
 - how does a data scientist get promoted?
 - what are some jobs in [data science](discipline)?
 - what jobs are there in [data science](discipline)?

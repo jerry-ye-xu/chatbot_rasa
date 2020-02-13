@@ -54,7 +54,10 @@ curl --request POST \
      --data-binary @repository.json
 ```
 
+When I first loaded up the server, the training data from `nlu.md` did not load properly. I removed the regex and synonyms and the data loaded properly, but I have yet to confirm whether it's one or both of them.
+
 ## Worklog
+- 13/01/20 | 0.0.8-rc - Debugging Rasa X server and preparing another story with languages and industry advice.
 - 12/01/20 | 0.0.7-rc - Merge with Master branch for Rasa X deployment.
 - 27/01/20 | 0.0.6-rc - Revamped nlu classes to support a more structured story flow. Added 3 forms, academic, industry and career choice. Removed `interest_level` intents and
 - 26/01/20 | 0.0.5-rc - Building miscellaneous question path and one happy path. Made forms work and updated intents classes - we're no longer incorporating the interest level of the user. Added list of random facts.
