@@ -244,7 +244,7 @@
 ## intent:bot_challenge
 - are you an [AI](chatbot)?
 - how did someone build an [AGI](chatbot) like you?
-- are you a [bot]((chatbot)?
+- are you a [bot](chatbot)?
 - are you a human?
 - am I talking to a [bot](chatbot)?
 - am I talking to a human?
@@ -393,8 +393,6 @@
 - statistics
 - statistical theory
 - stat
-
-<!-- ## synonym:data_science -->
 
 ## synonym:phd_studies
 - PhD studies
