@@ -204,36 +204,43 @@
 - What are the things I can learn to help me get a job as a [data scientist](discipline)
 - What are some things I need to learn to be a [data scientist](discipline)
 
-## intent:request_study_advice
-- I'm not sure what I should study?
-- What [degree](undergrad_studies) is best for me?
-- What should I study?
-- what should I study at uni?
-- what should I study at university?
-- Should I do [computer science](discipline)?
-- Should I do a [data science](discipline) [degree](undergrad_studies)?
-- What kind of academic background should I have?
-- Will math be useful for [data science](discipline)?
-- Is [software engineering](discipline) helpful for [data science](discipline)?
-- Will [computer science](discipline) be useful for [data science](discipline)?
-- Is [statistics](discipline) good for [data science](discipline)?
-- Do I need to learn [stats](discipline) to be a good data scientist?
-- Is [deep learning](ml_sub_discipline) good to learn?
+<!--
+    INTENT: CAREER PATH
+-->
 
+## intent:research
+- I want to do a [PhD](phd_studies)
+- I want to do [honours](postgrad_studies)
+- I'm thinking about doing a [PhD](phd_studies)
+- I'm thinking about doing [honours](postgrad_studies)
+- I'm considering further studies
+- I'm considering [postgraduate studies](postgrad_studies)
+- I'm considering [postgrad](postgrad_studies)
+- I want to do [research](phd_studies) in [machine learning](discipline)
+- I want to do [research](phd_studies) in [NLP](ml_sub_discipline)
+- I want to do [research](phd_studies) in [natural language processing](ml_sub_discipline)
+- I want to do [research](phd_studies) in [CV](ml_sub_discipline)
+- I want to do [research](phd_studies) in [computer vision](ml_sub_discipline)
 
-## intent:request_job_advice
-- What can I do to improve my chances of getting a data science job?
-- How do I get a data science job?
-- I want to get a data science job. How?
-- What skills do I need to get a data science job?
-- What do I need to learn to become a data scientist?
-- Will taking courses on [Coursera](mooc) help me get a job as a [data scientist](discipline)
-- Is learning some [math](discipline) on [Khan academy](mooc) help me get a job?
-- I just took a course on [udacity](mooc). Will that help me get a job as a data scientist?
-- How helpful are the courses on [udemy](mooc) for getting a job as a data scientist?
-- What are the things I need to do to get a job as a [data scientist](discipline)
-- What are the things I can learn to help me get a job as a [data scientist](discipline)
-- What are some things I need to learn to be a [data scientist](discipline)
+## intent:industry
+- I want to do [software engineering](job) after [graduating](milestone)
+- I want to work in [SWE](job) after [graduating](milestone)
+- I want to be a [data scientist](job)
+- I just want to get a job
+- Probably want to just work
+- I don't mind doing [engineering](job)
+- I want to do [analytics](job)
+- I want to work as a [machine learning engineer](job)
+- I just want to do [ML engineering](job)
+- Thinking about becoming a [dev](job)
+- My goal is to be a [machine learning](discipline) practitioner
+- I want to do research in [machine learning](discipline)
+- I want to work on [NLP](ml_sub_discipline) problems in industry
+- I want to do work on [natural language processing](ml_sub_discipline)
+- I want to do work on [CV](ml_sub_discipline)
+- I want to do work on [computer vision](ml_sub_discipline)
+- what is working in industry as a [data scientist](discipline) like?
+- what does working in industry mean?
 
 <!--
     INTENT: HAVING SOME FUN
