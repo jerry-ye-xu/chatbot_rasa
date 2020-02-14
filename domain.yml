@@ -206,6 +206,11 @@ templates:
 
   utter_ask_work_in_research:
   - text: "Are you thinking aout working in industry e.g. getting a graduate job or doing research in academia?"
+    buttons:
+        - title: "Research"
+          payload: "/research"
+        - title: "Industry"
+          payload: "/industry"
 
 slots:
     has_studies:
@@ -236,69 +241,70 @@ slots:
     lang_one:
       type: categorical
       values:
-      - Python
-      - R
-      - SQL
-      - Scala
-      - Julia
-      - Matlab
-      - VBA
-      - SAS
-      - Go
-      - Golang
-      - Java
-      - C++
-      - C
-      - Rust
-      - Haskell
-      - Clojure
-      - Other
+      - python
+      - r
+      - sql
+      - scala
+      - julia
+      - matlab
+      - vba
+      - sas
+      - go
+      - golang
+      - java
+      - c++
+      - c
+      - rust
+      - haskell
+      - clojure
+      - javascript
+      - other
       - none
 
     lang_two:
       type: categorical
       values:
-      - Python
-      - R
-      - SQL
-      - Scala
-      - Julia
-      - Matlab
-      - VBA
-      - SAS
-      - Go
-      - Golang
-      - Java
-      - C++
-      - C
-      - Rust
-      - Haskell
-      - Clojure
-      - Javascript
-      - Other
+      - python
+      - r
+      - sql
+      - scala
+      - julia
+      - matlab
+      - vba
+      - sas
+      - go
+      - golang
+      - java
+      - c++
+      - c
+      - rust
+      - haskell
+      - clojure
+      - javascript
+      - other
       - none
 
     lang_three:
       type: categorical
       values:
-      - Python
-      - R
-      - SQL
-      - Scala
-      - Julia
-      - Matlab
-      - VBA
-      - SAS
-      - Go
-      - Golang
-      - Java
-      - C++
-      - C
-      - Rust
-      - Haskell
-      - Clojure
-      - Javascript
-      - Other
+      - python
+      - r
+      - sql
+      - scala
+      - julia
+      - matlab
+      - vba
+      - sas
+      - go
+      - golang
+      - java
+      - c++
+      - c
+      - rust
+      - haskell
+      - clojure
+      - javascript
+      - other
       - none
 
     years_of_work:

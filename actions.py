@@ -108,9 +108,63 @@ class ActionIndustryAdvice(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(
-            text="Working in industry requires a slightly different set of skills compared to working in academia.\nThe emphasis becomes providing business (often monetary) value.\nState-of-the-art models may not be needed, and sometimes explainability is more important.\nSoftware engineering skills often are more important than understanding the complexities of advanced algorithms."
-        )
+
+        if not tracker.get_slot("lang_one"):
+            dispatcher.utter_message(
+                text="Working in industry requires a slightly different set of skills compared to working in academia.\nThe emphasis becomes providing business (often monetary) value.\nState-of-the-art models may not be needed, and sometimes explainability is more important.\nSoftware engineering skills often are more important than understanding the complexities of advanced algorithms."
+            )
+        else:
+            msg_combined = []
+            lang_one = tracker.get_slot("lang_one")
+            lang_two = tracker.get_slot("lang_two")
+            lang_three = tracker.get_slot("lang_three")
+            lang_arr = [lang_one, lang_two, lang_three]
+
+            if (lang_arr[0] is "none") and (lang_arr[1] is "none") and (lang_arr[2] is "none"):
+                learn_lang = "I think it'll be good to learn at least one programming language for data science. Maybe start wth Python or R, and learn some SQL. These will be the most essential for you to get started."
+
+                dispatcher.utter_message(
+                    text=f"{learn_lang}"
+                )
+                return []
+
+            if ("python" not in lang_arr) and ("r" not in lang_arr):
+                do_main_lang_msg = "Python and R are both very important for data science. You should be comfortable in at least one of them. My personal preference is Python since you'll be learning a general purpose language which has much broader use compared to R. However, R has VERY strong support from the community with regards to data science."
+                msg_combined.append(do_main_lang_msg)
+            elif "python" not in lang_arr:
+                python_msg = "Python is definitely an important language to know! Kudos to you =D"
+                msg_combined.append(python_msg)
+            elif "r" not in lang_arr:
+                r_msg = "R is very good for data science. It's good that you know it!"
+                msg_combined.append(r_msg)
+
+            if "sql" not in lang_arr:
+                do_sql_msg = "SQL is essential. You might have heard over 80% of data science is data processing. And in order to get the data you'll most likely need to use a variant of SQL. So please learn some."
+                msg_combined.append(do_sql_msg)
+            else:
+                sql_msg = "SQL is essential. It's good that you know it. The better you are at it the better. =D"
+                msg_combined.append(sql_msg)
+
+            if "scala" not in lang_arr:
+                scala_do_msg = "Scala is a good language to know, and important for many aspects of data engineering. It might be good to just briefly touch on it. Utilising Scala's full potential may require an understanding of functional programming, so make sure learn some of that as well!"
+                msg_combined.append(scala_do_msg)
+            else:
+                scala_msg = "Scala is a good language to know, and important for many aspects of data engineering."
+                msg_combined.append(scala_msg)
+
+            if ("rust" in lang_arr) or ("clojure" in lang_arr) or ("haskell" in lang_arr):
+                fp_msg = "Knowing functional programming can be useful as well. If you ever need to pick up Scala, understanding this paradigm can make it easier to see why Scala is so powerful."
+                msg_combined.append(fp_msg)
+
+            if ("c++" in lang_arr) or ("c" in lang_arr) or ("java" in lang_arr):
+                general_lang_msg = "Knowing a general purpose language is always good. C++ is often used to speed things up when performance is a priority."
+                msg_combined.append(general_lang_msg)
+
+            industry_advice_msg = "\n".join(msg_combined)
+            dispatcher.utter_message(
+            text=f"{industry_advice_msg}"
+            )
+
         return []
 
 class ActionDegreeAdvice(Action):
@@ -123,7 +177,7 @@ class ActionDegreeAdvice(Action):
 
         if not tracker.get_slot("has_studies"):
             dispatcher.utter_message(
-                text="I strongly recommend taking a combination of subjects in statistics, computer science and mathematics. This is because data science is fusion of multiple disciplines, and there are important concepts in each field you should understand.\nThe gains once you dive deeper in each field is marginal so just choose what you like after you cover the basics.\nIf you are interested in a different field, taking some electives would benefit you greatly.\nIn statistics, you should take some subjects linear models, statistical inference, probability theory and time series/stohastic processes.\nIn math, linear algebra and vector calculus are essential. Taking a course in optimisation would be useful too. Eventually taking measure theory would be helpful for more advanced probability theory.\nData structures and algorithms in computer science are fundamental. Distributed systems and operating systems would be very useful if you have enough space to take them.\nThese are just suggestions!"
+                text="I strongly recommend taking a combination of subjects in statistics, computer science and mathematics. This is because data science is fusion of multiple disciplines, and there are important concepts in each field you should understand.\nThe gains once you dive deeper in each field is marginal so just choose what you like after you cover the basics.\nIf you are interested in a different field, taking some electives would benefit you greatly.\nIn statistics, you should take some subjects linear models, statistical inference, probability theory and time series/stohastic processes.\nIn math, linear algebra and vector calculus are essential. Taking a course in optimisation would be useful too. Eventually taking measure theory would be helpful for more advanced probability theory.\nData structures and algorithms in computer science are fundamental. Distributed systems and operating systems would be very useful if you have enough space to take them.\nThese are just suggestions so feel free to do what interests you!"
             )
 
         else:
@@ -133,7 +187,7 @@ class ActionDegreeAdvice(Action):
             major_arr = [major_one, major_two]
 
             if major_one == "other" and (major_two == "other" or major_two == "none"):
-                no_stem_major = "Pursuing your field of interest is very important. You should not force yourself to study something you are not interested in.\nThat being said, if you want to learn some data science, taking some of the electives mentioned below would benefit you greatly.\nThese are just suggestions!"
+                no_stem_major_msg = "Pursuing your field of interest is very important. You should not force yourself to study something you are not interested in.\nThat being said, if you want to learn some data science, taking some of the electives mentioned below would benefit you greatly.\nThese are just suggestions!"
                 msg_combined.append(no_stem_major_msg)
 
             if "cs" not in major_arr:
@@ -254,7 +308,7 @@ class AcademicBackgroundForm(FormAction):
 class WorkExpForm(FormAction):
     arr_languages = [
         "python", "r", "sql", "scala", "julia", "matlab",
-        "vba", "sas", "go", "Gglang", "java", "c++", "c",
+        "vba", "sas", "go", "golang", "java", "c++", "c",
         "rust", "haskell", "clojure", "javascript", "other"
     ]
 
@@ -318,7 +372,7 @@ class WorkExpForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> Dict[Text, Any]:
 
-        if value not in arr_languages:
+        if value.lower() not in arr_languages:
             return {"lang_one": "none"}
         else:
             return {"lang_one": value}
@@ -342,7 +396,7 @@ class WorkExpForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> Dict[Text, Any]:
 
-        if value not in arr_languages:
+        if value.lower() not in arr_languages:
             return {"lang_three": "none"}
         else:
             return {"lang_three": value}
