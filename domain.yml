@@ -241,23 +241,24 @@ slots:
     lang_one:
       type: categorical
       values:
-      - Python
-      - R
-      - SQL
-      - Scala
-      - Julia
-      - Matlab
-      - VBA
-      - SAS
-      - Go
-      - Golang
-      - Java
-      - C++
-      - C
-      - Rust
-      - Haskell
-      - Clojure
-      - Other
+      - python
+      - r
+      - sql
+      - scala
+      - julia
+      - matlab
+      - vba
+      - sas
+      - go
+      - golang
+      - java
+      - c++
+      - c
+      - rust
+      - haskell
+      - clojure
+      - javascript
+      - other
       - none
 
     lang_two:
@@ -286,24 +287,24 @@ slots:
     lang_three:
       type: categorical
       values:
-      - Python
-      - R
-      - SQL
-      - Scala
-      - Julia
-      - Matlab
-      - VBA
-      - SAS
-      - Go
-      - Golang
-      - Java
-      - C++
-      - C
-      - Rust
-      - Haskell
-      - Clojure
-      - Javascript
-      - Other
+      - python
+      - r
+      - sql
+      - scala
+      - julia
+      - matlab
+      - vba
+      - sas
+      - go
+      - golang
+      - java
+      - c++
+      - c
+      - rust
+      - haskell
+      - clojure
+      - javascript
+      - other
       - none
 
     years_of_work:
