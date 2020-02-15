@@ -56,6 +56,14 @@ curl --request POST \
 
 When I first loaded up the server, the training data from `nlu.md` did not load properly. I removed the regex and synonyms and the data loaded properly, but I have yet to confirm whether it's one or both of them.
 
+__Spinning up the server__
+
+Here's what you'll need.
+```{bash}
+sudo docker-compose down
+sudo docker-compose up -d
+```
+
 ## Worklog
 - 13/01/20 | 0.0.8-rc - Debugging Rasa X server and preparing another story with languages and industry advice.
 - 12/01/20 | 0.0.7-rc - Merge with Master branch for Rasa X deployment.
