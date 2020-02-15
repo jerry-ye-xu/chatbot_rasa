@@ -38,6 +38,7 @@ entities:
 forms:
   - academic_background_form
   - work_exp_form
+  - industry_or_academia_form
 
 actions:
   - utter_purpose_of_existence
@@ -165,6 +166,25 @@ templates:
 
   utter_not_int:
   - text: "The value provided is not an integer. Please try again."
+
+#
+# CHITCHAT UTTERS
+#
+
+  chitchat/ask_weather:
+    - text: Sydney's weather is great, but this year's bushfires have been abnormally bad...
+
+  chitchat/meaning_of_life:
+    - text: Who knows, I'm sure you'll figure it out soon enough.
+
+  chitchat/am_I_trolling:
+    - text: No trolling please.
+
+  chitchat/ask_aussie_animals:
+    - text: Yea our fauna is pretty dangerous - spiders are poisonous, snakes will bite and the crocs are out to get ya.
+
+  chitchat/ai:
+    - text: Nah AI is not that smart yet. Don't worry.
 
 #
 # FORM UTTERS

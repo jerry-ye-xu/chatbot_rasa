@@ -131,10 +131,10 @@ class ActionIndustryAdvice(Action):
             if ("python" not in lang_arr) and ("r" not in lang_arr):
                 do_main_lang_msg = "Python and R are both very important for data science. You should be comfortable in at least one of them. My personal preference is Python since you'll be learning a general purpose language which has much broader use compared to R. However, R has VERY strong support from the community with regards to data science."
                 msg_combined.append(do_main_lang_msg)
-            elif "python" not in lang_arr:
+            elif "python" in lang_arr:
                 python_msg = "Python is definitely an important language to know! Kudos to you =D"
                 msg_combined.append(python_msg)
-            elif "r" not in lang_arr:
+            elif "r" in lang_arr:
                 r_msg = "R is very good for data science. It's good that you know it!"
                 msg_combined.append(r_msg)
 

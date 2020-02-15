@@ -56,6 +56,21 @@ curl --request POST \
 
 When I first loaded up the server, the training data from `nlu.md` did not load properly. I removed the regex and synonyms and the data loaded properly, but I have yet to confirm whether it's one or both of them.
 
+__Restarting the container__
+
+```{bash}
+sudo docker-compose down
+sudo docker-compose up -d
+```
+
+__Troubleshooting Rasa X Training Errors__
+
+Long story short, you want to look at the `network and console` tab after opening up `inspect`.
+
+Here is a concise [blog post](https://gstephens.org/rasa/chatbot/2019/08/12/rasa-x-troubleshooting.html) about this.
+
+You can track the Github issue [here](https://github.com/RasaHQ/rasa/issues/4231).
+
 ## Worklog
 - 13/01/20 | 0.0.8-rc - Debugging Rasa X server and preparing another story with languages and industry advice.
 - 12/01/20 | 0.0.7-rc - Merge with Master branch for Rasa X deployment.
