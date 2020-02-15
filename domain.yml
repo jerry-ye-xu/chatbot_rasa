@@ -19,7 +19,7 @@ intents:
   - insult: {triggers: utter_response_to_insult}
   - bot_challenge: {triggers: utter_iamabot}
   - want_random_fact: {triggers: utter_random_fact}
-  - chitchat: {triggers: respond_chitchat}
+  - chitchat: {triggers: utter_chitchat}
 
 entities:
   - discipline
@@ -171,21 +171,8 @@ templates:
 # CHITCHAT UTTERS
 #
 
-  chitchat/ask_weather:
-    - text: Sydney's weather is great, but this year's bushfires have been abnormally bad...
-
-  chitchat/meaning_of_life:
-    - text: Who knows, I'm sure you'll figure it out soon enough.
-
-  chitchat/am_I_trolling:
-    - text: No trolling please.
-
-  chitchat/ask_aussie_animals:
-    - text: Yea our fauna is pretty dangerous - spiders are poisonous, snakes will bite and the crocs are out to get ya.
-
-  chitchat/ai:
-    - text: Nah AI is not that smart yet. Don't worry.
-
+  utter_chitchat:
+    - text: "I'm not sure about that one. My speciality is data science career advice..."
 #
 # FORM UTTERS
 #

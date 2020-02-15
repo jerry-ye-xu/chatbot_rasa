@@ -72,6 +72,7 @@ Here is a concise [blog post](https://gstephens.org/rasa/chatbot/2019/08/12/rasa
 You can track the Github issue [here](https://github.com/RasaHQ/rasa/issues/4231).
 
 ## Worklog
+- 15/01/20 | 0.0.9-rc - Removing chitchat component to debug why model training isn't working. The `chitchat` component is stored on `save_chitchat` branch.
 - 13/01/20 | 0.0.8-rc - Debugging Rasa X server and preparing another story with languages and industry advice.
 - 12/01/20 | 0.0.7-rc - Merge with Master branch for Rasa X deployment.
 - 27/01/20 | 0.0.6-rc - Revamped nlu classes to support a more structured story flow. Added 3 forms, academic, industry and career choice. Removed `interest_level` intents and
