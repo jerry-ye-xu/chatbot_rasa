@@ -71,14 +71,58 @@ Here is a concise [blog post](https://gstephens.org/rasa/chatbot/2019/08/12/rasa
 
 You can track the Github issue [here](https://github.com/RasaHQ/rasa/issues/4231).
 
+__Don't forget to update `actions.py` on Rasa X manually!__
+
+__Setting up a Custom Actions Server__
+
+
+For your `endpoints.yml` file, you'll need to this.
+```
+models:
+  url: ${RASA_MODEL_SERVER}
+  token: ${RASA_X_TOKEN}
+  wait_time_between_pulls: ${RASA_MODEL_PULL_INTERVAL}
+tracker_store:
+  type: sql
+  dialect: "postgresql"
+  url: ${DB_HOST}
+  port: ${DB_PORT}
+  username: ${DB_USER}
+  password: ${DB_PASSWORD}
+  db: ${DB_DATABASE}
+  login_db: ${DB_LOGIN_DB}
+lock_store:
+  type: "redis"
+  url: ${REDIS_HOST}
+  port: ${REDIS_PORT}
+  password: ${REDIS_PASSWORD}
+  db: ${REDIS_DB}
+event_broker:
+  type: "pika"
+  url: ${RABBITMQ_HOST}
+  username: ${RABBITMQ_USERNAME}
+  password: ${RABBITMQ_PASSWORD}
+  queue: ${RABBITMQ_QUEUE}
+action_endpoint:
+  url: ${RASA_USER_APP}/webhook
+  token:  ""
+```
+Export `RASA_USER_APP` with
+```{bash}
+export RASA_USER_APP=http://action_server:5055
+```
+
+---
+
 ## Worklog
-- 15/01/20 | 0.0.9-rc - Removing chitchat component to debug why model training isn't working. The `chitchat` component is stored on `save_chitchat` branch.
-- 13/01/20 | 0.0.8-rc - Debugging Rasa X server and preparing another story with languages and industry advice.
-- 12/01/20 | 0.0.7-rc - Merge with Master branch for Rasa X deployment.
-- 27/01/20 | 0.0.6-rc - Revamped nlu classes to support a more structured story flow. Added 3 forms, academic, industry and career choice. Removed `interest_level` intents and
-- 26/01/20 | 0.0.5-rc - Building miscellaneous question path and one happy path. Made forms work and updated intents classes - we're no longer incorporating the interest level of the user. Added list of random facts.
-- 26/01/20 | 0.0.4-rc - Incorporate `chitchat` into chatbot.
-- 25/01/20 | 0.0.3-rc - Build basic 'happy path' story for a particular audience. Provide structure of `utters` vs. `actions` and `forms`.
-- 25/01/20 | 0.0.2-rc - Added initial NLU training examples after designing  story flow and intents offline.
-- 24/12/19 | 0.0.1-rc - Initial commit.
+- 16/01/20 | 0.0.10-rc - Adding custom actions server for Rasa X and testing.
+- 15/01/20 | 0.0.09-rc - Removing chitchat component to debug why model training isn't working. The `chitchat` component is stored on `save_chitchat` branch.
+- 13/01/20 | 0.0.08-rc - Debugging Rasa X server and preparing another story with languages and industry advice.
+- 12/01/20 | 0.0.07-rc - Merge with Master branch for Rasa X deployment.
+- 27/01/20 | 0.0.06-rc - Revamped nlu classes to support a more structured story flow. Added 3 forms, academic, industry and career choice. Removed `interest_level` intents and
+- 26/01/20 | 0.0.05-rc - Building miscellaneous question path and one happy path. Made forms work and updated intents classes - we're no longer incorporating the interest level of the user. Added list of random facts.
+- 26/01/20 | 0.0.04-rc - Incorporate `chitchat` into chatbot.
+- 25/01/20 | 0.0.03-rc - Build basic 'happy path' story for a particular audience. Provide structure of `utters` vs. `actions` and `forms`.
+- 25/01/20 | 0.0.02-rc - Added initial NLU training examples after designing  story flow and intents offline.
+- 24/12/19 | 0.0.01-rc - Initial commit.
 

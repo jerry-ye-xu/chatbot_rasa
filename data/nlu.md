@@ -42,6 +42,11 @@
 - for sure
 - cool
 - alright
+- hahaha
+- haha
+- ahah
+- ahaha
+- hhhh
 
 
 ## intent:deny
@@ -134,6 +139,10 @@
 <!--
     INTENT: ASK GENERAL QUESTIONS
 -->
+
+## intent:ask_define_data_science
+- so what is data science?
+- I don't know what data science is... can you tell me?
 
 ## intent:ask_average_salary
 - how much does a [data scientist](discipline) make?

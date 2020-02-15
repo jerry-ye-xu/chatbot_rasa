@@ -43,7 +43,7 @@ class ActionIntroDataScience(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         dispatcher.utter_message(
-            text="Data science is a field that combines ideas from statistics and computer science.\nIt involves building data pipelines, data analysis, building models and applying these models for prediction or inference."
+            text="Data science is a field that combines ideas from statistics and computer science.\nIt involves building data pipelines, data analysis, building models and applying these models for prediction or inference.\nData science practitioners apply machine learning algorithms to numbers, text, images, video, audio, and more to produce artificial intelligence (AI) systems to perform tasks that ordinarily require human intelligence.\nIn turn, these systems generate insights which analysts and business users can translate into tangible business value."
         )
         return []
 

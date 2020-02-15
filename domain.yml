@@ -20,6 +20,7 @@ intents:
   - bot_challenge: {triggers: utter_iamabot}
   - want_random_fact: {triggers: utter_random_fact}
   - chitchat: {triggers: utter_chitchat}
+  - ask_define_data_science: {triggers: action_intro_ds}
 
 entities:
   - discipline
@@ -80,7 +81,7 @@ actions:
   - action_industry_advice
   - action_degree_advice
 
-  - respond_chitchat
+  - utter_chitchat
 
 templates:
   utter_purpose_of_existence:
@@ -173,6 +174,7 @@ templates:
 
   utter_chitchat:
     - text: "I'm not sure about that one. My speciality is data science career advice..."
+
 #
 # FORM UTTERS
 #
