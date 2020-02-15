@@ -34,11 +34,6 @@ entities:
   - chatbot
   - uni_year
   - num_years
-  - math_subjects
-  - stats_subjects
-  - datasci_subjects
-  - compsci_subjects
-  - swe_subjects
 
 forms:
   - academic_background_form
