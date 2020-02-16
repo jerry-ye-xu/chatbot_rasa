@@ -1,5 +1,9 @@
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [RASA Framework](#rasa-framework)
-- [Application](#application)
+- [Interactive Mode](#interactive-mode)
+- [Rasa X](#rasa-x)
 - [Worklog](#worklog)
 
 ---
@@ -24,10 +28,30 @@ rasa shell --endpoints endpoints.yml
 
 ### Chitchat
 
+__Note:__ This functionality was removed for Rasa X deployment because it's not supported there yet.
+
+Chitchat is specified in `nlu.md` with
+```{markdown}
+## intent:chitchat/<topic>
+    - <examples>
+    - <examples>
+```
+The responses are stored in `./data/responses.md`
+```
+## <topic>
+* chitchat/<topic>
+    - <utterance>
+```
+The `domain.yml` file needs to be adjusted to have
+```
+intents:
+  - greet: {triggers: utter_greet}
+  - chitchat: {triggers: respond_chitchat}
+```
 
 ## Interactive Mode
 
-The docs STRONGLY recommend you develop your stories on interactive mode, and they are not wrong =D
+The docs STRONGLY recommend you develop your stories on interactive mode, and they are not wrong.
 
 Yes. Listen to the docs =)
 
@@ -37,12 +61,14 @@ rasa interactive -m models
 
 Remember to run `rasa action` to ensure that all the action functions can be called.
 
+```{bash}
+python -m rasa_sdk --actions actions
+```
+
 You'll need to refresh both `rasa action` and `rasa train` everytime
  you change something.
 
 When you export, Rasa will ask whether you want to export. So the best choice is to export the interactive mode constructed files to a `backup` dir, otherwise they will be read in when you run `rasa train`.
-
-## Application
 
 ## Rasa X
 
@@ -107,10 +133,28 @@ action_endpoint:
   url: ${RASA_USER_APP}/webhook
   token:  ""
 ```
-Export `RASA_USER_APP` with
-```{bash}
-export RASA_USER_APP=http://action_server:5055
+
+For class #9 of the Rasa Masterclass, `docker-compose.override.yml` was specified to be
 ```
+version: '3.4'
+services:
+  app:
+    image: 'rasa/rasa-sdk:latest'
+    volumes:
+      - './actions:/app/actions'
+    ports:
+      - '5055:5055'
+    depends_on:
+      - rasa-production
+```
+
+The `RASA_USER_APP` variable is
+```{bash}
+http://app:5055
+```
+__Bot description for test users__
+
+ANOVA-bot is a smart kid that knows a little about data science. It can tell random facts, be a little cheeky, and give you some tips about what to do if you're a student looking to do data science.
 
 ---
 
