@@ -8,6 +8,31 @@
 
 ---
 
+## Chatting with the Bot
+
+If you want to chat with the bot, first install the __virtual env__
+
+```{bash}
+virtualenv venv
+source activate.sh
+pip3 install -r requirements.txt
+```
+
+Then train the model with
+```{bash}
+rasa train
+```
+and then kickstart the `action server` with
+```{bash}
+rasa run action
+```
+Now you can open a new tab and chat with ANOVA-bot using
+```{bash}
+rasa shell --endpoints endpoints.yml
+```
+
+The bot is still in its infancy so be nice to it!
+
 ## RASA Framework
 
 ### Working with Rasa NLU
@@ -159,6 +184,7 @@ ANOVA-bot is a smart kid that knows a little about data science. It can tell ran
 ---
 
 ## Worklog
+
 - 16/01/20 | 0.0.10-rc - Adding custom actions server for Rasa X and testing.
 - 15/01/20 | 0.0.09-rc - Removing chitchat component to debug why model training isn't working. The `chitchat` component is stored on `save_chitchat` branch.
 - 13/01/20 | 0.0.08-rc - Debugging Rasa X server and preparing another story with languages and industry advice.
